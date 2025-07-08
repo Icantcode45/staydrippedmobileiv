@@ -1,0 +1,52 @@
+ <div class="faq-cta">
+      <h3>Still Have Questions?</h3>
+      <p>Our medical team is here to help you understand how IV therapy can support your wellness goals.</p>
+
+      <div class="faq-contact-options">
+        <a href="tel:+16026889825" class="contact-option">
+          <i class="fas fa-phone"></i>
+          <span>Call Us: (602) 688-9825</span>
+        </a>
+
+        <a href="mailto:Info@staydrippedmobileiv.com" class="contact-option">
+          <i class="fas fa-envelope"></i>
+          <span>Email: Info@staydrippedmobileiv.com</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const faqButtons = document.querySelectorAll(".faq-question");
+
+      faqButtons.forEach((button) => {
+        button.addEventListener("click", function () {
+          const answer = this.nextElementSibling;
+          const expanded = this.getAttribute("aria-expanded") === "true";
+
+          // Close all other open answers
+          document.querySelectorAll(".faq-answer").forEach((el) => {
+            if (el !== answer) {
+              el.style.display = "none";
+              el.previousElementSibling.setAttribute("aria-expanded", "false");
+              el.previousElementSibling.querySelector("i").classList.replace("fa-minus", "fa-plus");
+            }
+          });
+
+          // Toggle current one
+          this.setAttribute("aria-expanded", !expanded);
+          answer.style.display = expanded ? "none" : "block";
+          const icon = this.querySelector("i");
+          icon.classList.toggle("fa-plus");
+          icon.classList.toggle("fa-minus");
+        });
+      });
+
+      // Initialize all answers as hidden
+      document.querySelectorAll(".faq-answer").forEach((el) => {
+        el.style.display = "none";
+      });
+    });
+  </script>
+</section>
