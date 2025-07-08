@@ -1,0 +1,78 @@
+diff --git a/assets/js/widgets/header-whoo-search.js b/assets/js/widgets/header-whoo-search.js
+--- a/assets/js/widgets/header-whoo-search.js
++++ b/assets/js/widgets/header-whoo-search.js
+@@ -1,1 +1,1 @@
+-;(function ($) {
++(function ($) {
+diff --git a/assets/js/moment.js b/assets/js/moment.js
+--- a/assets/js/moment.js
++++ b/assets/js/moment.js
+@@ -188,1 +188,1 @@
+-    var N = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|N{1,5}|YYYYYY|YYYYY|YYYY|YY|y{2,4}|yo?|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g
++    var N = /(\[[^[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|N{1,5}|YYYYYY|YYYYY|YYYY|YY|y{2,4}|yo?|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g
+@@ -189,1 +189,1 @@
+-      , P = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g
++      , P = /(\[[^[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g
+@@ -275,1 +275,1 @@
+-    var B, J = /\d/, Q = /\d\d/, X = /\d{3}/, K = /\d{4}/, ee = /[+-]?\d{6}/, te = /\d\d?/, ne = /\d\d\d\d?/, se = /\d\d\d\d\d\d?/, ie = /\d{1,3}/, re = /\d{1,4}/, ae = /[+-]?\d{1,6}/, oe = /\d+/, ue = /[+-]?\d+/, le = /Z|[+-]\d\d:?\d\d/gi, he = /Z|[+-]\d\d(?::?\d\d)?/gi, de = /[0-9]{0,256}['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFF07\uFF10-\uFFEF]{1,256}|[\u0600-\u06FF\/]{1,256}(\s*?[\u0600-\u06FF]{1,256}){1,2}/i;
++    var B, J = /\d/, Q = /\d\d/, X = /\d{3}/, K = /\d{4}/, ee = /[+-]?\d{6}/, te = /\d\d?/, ne = /\d\d\d\d?/, se = /\d\d\d\d\d\d?/, ie = /\d{1,3}/, re = /\d{1,4}/, ae = /[+-]?\d{1,6}/, oe = /\d+/, ue = /[+-]?\d+/, le = /Z|[+-]\d\d:?\d\d/gi, he = /Z|[+-]\d\d(?::?\d\d)?/gi, de = /[0-9]{0,256}['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFF07\uFF10-\uFFEF]{1,256}|[\u0600-\u06FF/]{1,256}(\s*?[\u0600-\u06FF]{1,256}){1,2}/i;
+@@ -282,1 +282,1 @@
+-        return m(B, e) ? B[e](t._strict, t._locale) : new RegExp(me(e.replace("\\", "").replace(/\\(\[)|\\(\])|\[([^\]\[]*)\]|\\(.)/g, function(e, t, n, s, i) {
++        return m(B, e) ? B[e](t._strict, t._locale) : new RegExp(me(e.replace("\\", "").replace(/\\(\[)|\\(\])|\[([^\][]*)\]|\\(.)/g, function(e, t, n, s, i) {
+@@ -287,1 +287,1 @@
+-        return e.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&")
++        return e.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&")
+@@ -350,1 +350,1 @@
+-      , Pe = /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?/
++      , Pe = /D[oD]?(\[[^[\]]*\]|\s)+MMMM?/
+diff --git a/assets/js/main.js b/assets/js/main.js
+--- a/assets/js/main.js
++++ b/assets/js/main.js
+@@ -217,1 +217,1 @@
+-    const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{4,6}$/;
++    const re = /^[+]?[(]?[0-9]{3}[)]?[-\s\.]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{4,6}$/;
+diff --git a/assets/js/intakeq.js b/assets/js/intakeq.js
+--- a/assets/js/intakeq.js
++++ b/assets/js/intakeq.js
+@@ -2,1 +2,1 @@
+-    var r, c, s, l, u, d = this, p = Math.floor(1e4 * Math.random()), f = Function.prototype, h = /^((http.?:)\/\/([^:\/\s]+)(:\d+)*)/, m = /[\-\w]+\/\.\.\//, g = /([^:])\/\//g, v = "", y = {}, w = e.easyXDM, k = "easyXDM_", b = !1;
++    var r, c, s, l, u, d = this, p = Math.floor(1e4 * Math.random()), f = Function.prototype, h = /^((http.?:)\/\/([^:/\s]+)(:\d+)*)/, m = /[\-\w]+\/\.\.\//, g = /([^:])\/\//g, v = "", y = {}, w = e.easyXDM, k = "easyXDM_", b = !1;
+@@ -18,1 +18,1 @@
+-            } catch (e) {}
++            } catch (e) { /* empty */ }
+@@ -116,1 +116,1 @@
+-            n.hasOwnProperty(r) && a.push(r + "=" + i(n[r]));
++            Object.prototype.hasOwnProperty.call(n, r) && a.push(r + "=" + i(n[r]));
+@@ -147,1 +147,1 @@
+-            n.hasOwnProperty(a) && (a in e ? "object" == typeof (o = n[a]) ? D(e[a], o, t) : t || (e[a] = n[a]) : e[a] = n[a]);
++            Object.prototype.hasOwnProperty.call(n, a) && (a in e ? "object" == typeof (o = n[a]) ? D(e[a], o, t) : t || (e[a] = n[a]) : e[a] = n[a]);
+@@ -183,1 +183,1 @@
+-                    e.usePost.hasOwnProperty(c) && (r ? a = n.createElement('<input name="' + c + '"/>') : (a = n.createElement("INPUT")).name = c,
++                    Object.prototype.hasOwnProperty.call(e.usePost, c) && (r ? a = n.createElement('<input name="' + c + '"/>') : (a = n.createElement("INPUT")).name = c,
+@@ -318,1 +318,1 @@
+-            "object" == typeof (o = e)["JSON"] && o.JSON || n.write('<script type="text/javascript" src="' + t + '"><\/script>')
++            "object" == typeof (o = e)["JSON"] && o.JSON || n.write('<script type="text/javascript" src="' + t + '"></script>')
+@@ -327,1 +327,1 @@
+-            if (B.hasOwnProperty(e)) {
++            if (Object.prototype.hasOwnProperty.call(B, e)) {
+@@ -359,1 +359,1 @@
+-                if (n.local.hasOwnProperty(t)) {
++                if (Object.prototype.hasOwnProperty.call(n.local, t)) {
+@@ -444,1 +444,1 @@
+-            y.Fn.set("flash_loaded" + t.replace(/[\-.]/g, "_"), (function() {
++            y.Fn.set("flash_loaded" + t.replace(/[-.]/g, "_"), (function() {
+@@ -466,1 +466,1 @@
+-            i(t.replace(/[\-.]/g, "_")),
++            i(t.replace(/[-.]/g, "_")),
+diff --git a/assets/js/update-booking-widgets.js b/assets/js/update-booking-widgets.js
+--- a/assets/js/update-booking-widgets.js
++++ b/assets/js/update-booking-widgets.js
+@@ -79,1 +79,1 @@
+-        titleElement.textContent.includes(serviceTitle.replace(/\'/g, "'"))
++        titleElement.textContent.includes(serviceTitle.replace(/'/g, "'"))
+diff --git a/assets/js/frontend/order-attribution.js b/assets/js/frontend/order-attribution.js
+--- a/assets/js/frontend/order-attribution.js
++++ b/assets/js/frontend/order-attribution.js
+@@ -63,1 +63,1 @@
+-            this.hasOwnProperty("_values")) {
++            Object.prototype.hasOwnProperty.call(this, "_values")) {
